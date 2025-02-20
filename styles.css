@@ -1,0 +1,124 @@
+.container {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  .header-row {
+    background-color: rgb(172, 147, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    
+  }
+ 
+
+  .header-row .box {
+    padding: 2px;
+  }
+
+  .header-row li {
+    display: inline;
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .header-row a {
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  .header-row  {
+    text-decoration: underline;
+  }
+
+  .row {
+    padding: 50px;
+    height: 55%;
+    background-image: url("http://ts2.mm.bing.net/th?id=OIP.3mERxqPgQkkaKco8jP7nQwHaE8&pid=15.1");
+  }
+
+  .row .box {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .footer {
+    padding: 20px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-size: large;
+  }
+
+  button a{
+    background-color: teal;
+    padding: 10px;
+    color: white;
+    border:rgb(145, 186, 237);
+    border-radius: 10%;
+    box-shadow: rgb(56, 54, 54);
+  }
+  .box3{
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+  .box3:hover{
+    transform: scale(1.2,1.2);
+  }
+  button:hover{
+    transform: scale(1.2,1.2);
+  }
+  h1{
+    color: rgb(163, 195, 195);
+  }
+
+
+
+  <style>
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      flex-direction: column;
+      text-align: center;
+  }
+  .box{
+     
+      border:2px solid rgb(89, 55, 94);
+      padding:20px;
+      width:400px;
+      border-radius: 20px;
+  }
+  input{
+      background-color: rgb(251, 244, 235);
+      padding:20px;
+      width:90%;
+  }
+  button{
+      background-color: rgb(72, 19, 92);
+      width:100%;
+      padding:15px;
+      border-radius: 10px;
+      color: white;
+      font-size: x-large;
+  }
+</style>
+
+
+
+
+

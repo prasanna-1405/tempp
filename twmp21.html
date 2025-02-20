@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            flex-direction: column;
+            text-align: center;
+        }
+        .box{
+           
+            border:2px solid rgb(89, 55, 94);
+            padding:20px;
+            width:400px;
+            border-radius: 20px;
+        }
+        input{
+            background-color: rgb(251, 244, 235);
+            padding:20px;
+            width:90%;
+        }
+        button{
+            background-color: rgb(72, 19, 92);
+            width:100%;
+            padding:15px;
+            border-radius: 10px;
+            color: white;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        let users = [];
+        function showform() {
+            let message = document.getElementById("message");
+            message.innerHTML = `
+            <div class="container">
+                <div class="box">
+                    <h2>Sign up</h2>
+                        <input type="text" required placeholder="enter name " id="name"><br><br>
+                        <input type="text" required placeholder="enter email address" id="email"><br><br>
+                        <input type="password" required placeholder="enter password" id="pass"><br><br>
+                        <input type="date" required placeholder="dob" id="date"><br><br>
+                        <button onclick="f1()">Submit</button>
+                    </div>
+                </div>
+            </div>`;
+        }
+        function f2() {
+            let message = document.getElementById("message");
+            message.innerHTML = `
+            <div class="container">
+                <div class="box">
+                    <h2>LOGIN PAGE</h2>
+                    <input type="text" required placeholder="enter name" id="name" autofocus><br><br><br>
+                    <input type="password" required placeholder="enter password" id="pass" autofocus><br><br><br>
+                    <button onclick="checkLogin()">LOGIN</button>
+                    <p><div id="message"></div></p>
+                </div>
+            </div>`;
+        }
+        function f1() {
+            let n = document.getElementById("name").value;
+            let e = document.getElementById("email").value;
+            let p = document.getElementById("pass").value;
+            let d = document.getElementById("date").value;
+
+            let user = {
+                name: n,
+                email: e,
+                password: p,
+                dob: d
+            };
+
+            users.push(user);
+            alert("User registered successfully!");
+            f2();
+        }
+        function checkLogin() {
+            let loginEmail = document.getElementById("email").value;
+            let loginPassword = document.getElementById("pass").value;
+
+            let foundUser = users.find(user => user.email === loginEmail && user.password === loginPassword);
+
+            if (foundUser) {
+                alert("Login successful!");
+            } else {
+                alert("Invalid credentials!");
+            }
+        }
+        showform();
+    </script>
+
+</body>
+</html>

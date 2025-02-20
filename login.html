@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+    let e=document.getElementById("email").value
+    let p=document.getElementById("pass").value
+    if(e!="john@gmail.com" || p!="1234"){
+        message.innerHTML = "denied";
+    }
+    else if(e==NULL || p==NULL){
+        message.innerHTML="likhde kuch"
+    }
+    else{
+        message.innerHTML = "noice";
+    }
+}
+    </script>  
+    <style>
+        .container{
+            display:flex;
+            justify-content:center;
+            flex-direction: column;
+            align-items:center;
+            text-align: center;
+        }
+        .box{
+            border:2px solid silver;
+            padding:20px;
+            width:400px;
+            border-radius: 20px;
+        }
+        input{
+            padding:20px;
+            width:90%;
+        }
+        button{
+            background-color: blue;
+            width:100%;
+            padding:20px;
+            border-radius: 10px;
+            color: white;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>LOGIN</h2>
+    <input type="text" required placeholder="enter email adress" id="email" autofocus><br></br>
+    <input type="password" required placeholder="enter password" id="pass" autofocus><br></br>
+   <!-- <input type="checkbox" id="chkremember"><label for="chkremember">Remember me</label> -->
+    <button onclick="f1()">LOGIN</button>
+    <p><div id="message"></div></p>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let a=document.getElementById("s1").value
+            let b=Number(document.getElementById("n").value)
+            let c=document.getElementById("s2").value
+            let d=document.getElementById("s").value
+            let msg = document.getElementById("d1");
+            d1.innerHTML=a + "|" + b + "|" +c+ "|" + d;
+            
+            
+           
+        }
+    </script>
+</head>
+<style>
+    .container{
+        display:flex;
+        justify-content:center;
+        flex-direction: column;
+        align-items:center;
+        
+    }
+    .box{
+        border:2px solid silver;
+        padding:20px;
+        width:400px;
+        border-radius: 20px;
+    }
+    input{
+        padding:20px;
+        width:90%;
+    }
+    button{
+        background-color: blue;
+        width:100%;
+        padding:20px;
+        border-radius: 10px;
+        color: white;
+        font-size: xx-large;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+    <div>
+        <h1>hi</h1>.
+        <p><input type="text" id="s1"></p><br>
+        <p><input type="number" id="n"></p><br>
+        <p><input type ="text" id="s2"></p><br>
+        <p><input type ="text" id="s"></p><br>
+        <button onclick="f1()">submit</button><br>
+        <div id="d1"></div>
+        
+    </div>
+</body>
+</html>
